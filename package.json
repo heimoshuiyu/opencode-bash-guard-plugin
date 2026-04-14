@@ -1,0 +1,20 @@
+{
+  "name": "opencode-bash-guard-plugin",
+  "version": "1.0.0",
+  "description": "OpenCode plugin that guards bash commands and redirects to specialized tools",
+  "type": "module",
+  "exports": {
+    "./server": "./index.ts"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "bash",
+    "guard"
+  ],
+  "author": "heimoshuiyu",
+  "license": "MIT",
+  "dependencies": {
+    "@opencode-ai/plugin": "*"
+  }
+}
