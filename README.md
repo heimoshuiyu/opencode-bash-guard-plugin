@@ -2,6 +2,8 @@
 
 An [OpenCode](https://opencode.ai) plugin that intercepts bash commands and redirects the AI agent to use specialized tools instead. When the agent tries to run commands like `grep`, `cat`, or `sed` through the bash tool, this plugin blocks the call and suggests the appropriate dedicated tool — improving accuracy and efficiency.
 
+[中文文档](./README.zh.md)
+
 ## Features
 
 - **Command interception** — Blocks bash commands that have better dedicated tool alternatives.
