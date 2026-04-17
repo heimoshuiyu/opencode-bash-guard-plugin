@@ -5,7 +5,6 @@ const REDIRECTS: Record<string, string> = {
   rg: "Grep",
   cat: "Read",
   sed: "Edit",
-  ls: "List",
   find: "Grep or Glob",
   cd: "workdir",
 }

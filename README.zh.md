@@ -16,7 +16,6 @@
 | `rg`   | `Grep`         | 专用内容搜索工具   |
 | `cat`  | `Read`         | 专用文件读取工具   |
 | `sed`  | `Edit`         | 专用文件编辑工具   |
-| `ls`   | `List`         | 目录列表工具       |
 | `find` | `Grep or Glob` | 文件搜索工具       |
 | `cd`   | `workdir` 参数 | 使用 bash 的 `workdir` 参数代替 |
 

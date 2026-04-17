@@ -18,7 +18,6 @@ An [OpenCode](https://opencode.ai) plugin that intercepts bash commands and redi
 | `rg`    | `Grep`        | Purpose-built content search |
 | `cat`   | `Read`        | Dedicated file reading tool |
 | `sed`   | `Edit`        | Dedicated file editing tool |
-| `ls`    | `List`        | Directory listing tool |
 | `find`  | `Grep or Glob`| File search tools |
 | `cd`    | `workdir` param | Use bash's `workdir` parameter instead |
 
