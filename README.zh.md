@@ -10,14 +10,14 @@
 
 ## 重定向规则
 
-| 命令   | 重定向到       | 原因               |
-| ------ | -------------- | ------------------ |
-| `grep` | `Grep`         | 专用内容搜索工具   |
-| `rg`   | `Grep`         | 专用内容搜索工具   |
-| `cat`  | `Read`         | 专用文件读取工具   |
-| `sed`  | `Edit`         | 专用文件编辑工具   |
-| `find` | `Grep or Glob` | 文件搜索工具       |
-| `cd`   | `workdir` 参数 | 使用 bash 的 `workdir` 参数代替 |
+| 命令   | 重定向到          | 原因                     |
+| ------ | ----------------- | ------------------------ |
+| `grep` | `grep`            | 专用内容搜索工具          |
+| `rg`   | `grep`            | 专用内容搜索工具          |
+| `cat`  | `read or grep`    | 专用文件读取/搜索工具     |
+| `sed`  | `edit`            | 专用文件编辑工具          |
+| `find` | `grep or glob`    | 文件搜索工具              |
+| `cd`   | `workdir` 参数    | 使用 bash 的 `workdir` 参数代替 |
 
 ## 安装
 
@@ -37,7 +37,7 @@ OpenCode 会在下次运行时自动安装插件。
 插件自动生效，无需配置。当 AI 智能体尝试执行被拦截的命令时，会收到如下错误提示：
 
 ```
-Command starts with 'cat'. Use the `Read` tool instead.
+Command starts with 'cat'. You have dedicated tools available. Use the `read` or `grep` tool instead of running shell commands.
 
 Tip: If you really want to use this tool, add a "# confirm" comment at the end of the command and run it again.
 ```

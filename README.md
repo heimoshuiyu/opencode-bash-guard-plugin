@@ -14,11 +14,11 @@ An [OpenCode](https://opencode.ai) plugin that intercepts bash commands and redi
 
 | Command | Redirected To | Reason |
 | ------- | ------------- | ------ |
-| `grep`  | `Grep`        | Purpose-built content search |
-| `rg`    | `Grep`        | Purpose-built content search |
-| `cat`   | `Read`        | Dedicated file reading tool |
-| `sed`   | `Edit`        | Dedicated file editing tool |
-| `find`  | `Grep or Glob`| File search tools |
+| `grep`  | `grep`        | Purpose-built content search |
+| `rg`    | `grep`        | Purpose-built content search |
+| `cat`   | `read or grep` | Dedicated file reading/search tools |
+| `sed`   | `edit`        | Dedicated file editing tool |
+| `find`  | `grep or glob` | File search tools |
 | `cd`    | `workdir` param | Use bash's `workdir` parameter instead |
 
 ## Setup
@@ -39,7 +39,7 @@ OpenCode will automatically install the plugin on next run.
 The plugin works automatically — no configuration needed. When the AI agent attempts a blocked command, it receives an error message like:
 
 ```
-Command starts with 'cat'. Use the `Read` tool instead.
+Command starts with 'cat'. You have dedicated tools available. Use the `read` or `grep` tool instead of running shell commands.
 
 Tip: If you really want to use this tool, add a "# confirm" comment at the end of the command and run it again.
 ```
