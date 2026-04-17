@@ -3,7 +3,7 @@ import type { PluginInput, PluginOptions, Plugin, Hooks } from "@opencode-ai/plu
 const REDIRECTS: Record<string, string> = {
   grep: "Grep",
   rg: "Grep",
-  cat: "Read",
+  cat: "Read or Grep",
   sed: "Edit",
   find: "Grep or Glob",
   cd: "workdir",
@@ -20,6 +20,12 @@ function guard(command: string): string | null {
   const tool = REDIRECTS[name]
   if (!tool) return null
 
+  if (tool === "Read or Grep") {
+    return (
+      `Command starts with '${name}'. Use the \`Read\` or \`Grep\` tool instead.\n\n` +
+      `Tip: If you really want to use this tool, add a "# confirm" comment at the end of the command and run it again.`
+    )
+  }
   if (tool === "Grep or Glob") {
     return (
       `Command starts with 'find'. Use the \`Grep\` or \`Glob\` tool instead.\n\n` +
