@@ -22,24 +22,24 @@ function guard(command: string): string | null {
 
   if (tool === "read or grep") {
     return (
-      `Command starts with '${name}'. Use the \`read\` or \`grep\` tool instead.\n\n` +
+      `Command starts with '${name}'. You have dedicated tools available. Use the \`read\` or \`grep\` tool instead of running shell commands.\n\n` +
       `Tip: If you really want to use this tool, add a "# confirm" comment at the end of the command and run it again.`
     )
   }
   if (tool === "grep or glob") {
     return (
-      `Command starts with 'find'. Use the \`grep\` or \`glob\` tool instead.\n\n` +
+      `Command starts with 'find'. You have dedicated tools available. Use the \`grep\` or \`glob\` tool instead of running shell commands.\n\n` +
       `Tip: If you really want to use this tool, add a "# confirm" comment at the end of the command and run it again.`
     )
   }
   if (tool === "workdir") {
     return (
-      `Command starts with '${name}'. Do not use 'cd' to change directories. Use the bash tool's \`workdir\` parameter to specify the working directory instead.\n\n` +
+      `Command starts with '${name}'. You have a dedicated way to change directories. Use the bash tool's \`workdir\` parameter to specify the working directory instead of running 'cd'.\n\n` +
       `Tip: If you really want to use this tool, add a "# confirm" comment at the end of the command and run it again.`
     )
   }
   return (
-    `Command starts with '${name}'. Use the \`${tool}\` tool instead.\n\n` +
+    `Command starts with '${name}'. You have a dedicated \`${tool}\` tool available. Use it instead of running shell commands.\n\n` +
     `Tip: If you really want to use this tool, add a "# confirm" comment at the end of the command and run it again.`
   )
 }
